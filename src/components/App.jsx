@@ -1,21 +1,14 @@
-import ContactForm from './ContactForm/ContactForm';
-import ContactList from './ContactList/ContactList';
-import SearchBox from './SearchBox/SearchBox';
-import css from './App.module.css';
+import ContactForm from './ContactForm.jsx';
+import ContactList from './ContactList.jsx';
+import SearchBox from './SearchBox.jsx';
 
-function App() {
+export const App = () => {
   return (
-    <div className={css.container}>
-      <div>
-        <h1 className={css.title}>Phonebook</h1>
-        <ContactForm />
-      </div>
-      <div className={css.searchWrap}>
-        <SearchBox />
-        <ContactList />
-      </div>
+    <div>
+      <h1>Phonebook</h1>
+      <ContactForm />
+      <SearchBox />
+      <ContactList />
     </div>
   );
-}
-
-export default App;
+};
